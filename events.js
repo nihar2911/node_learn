@@ -10,13 +10,15 @@ const EvetEmittre = require('events');
 
 const nayaEvent = new EvetEmittre();
 
-nayaEvent.on('Text aaya', function(){
-    console.log('Hao aa gaya Text')
+nayaEvent.on('Object', function(Eventarg){
+    console.log('Ye raha Object', Eventarg)
 });
 // Register a listener
 
-nayaEvent.emit('Text aaya')
+nayaEvent.emit('Object', {id:1, url:'pornhub.com'})
 //Raise an event 
+//Event emits some data 
+//We must catch it object 
 
 
 
