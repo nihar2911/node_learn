@@ -10,7 +10,9 @@
   "keywords": [],
   "description": "",
   "dependencies": {
-    "mongoose": "^5.1.0",
     "underscore": "^1.9.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
   }
 }
