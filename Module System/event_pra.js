@@ -1,10 +1,15 @@
 
 const EventEmitter = require('events');
 
-const emitter = new EventEmitter();
+const Logger = require('./logger');
+//use loggar.js file 
+const logger = new Logger();
+//const emitter = new EventEmitter();
 
-emitter.on('logger', (eventArg) => {
+logger.on('messageLogged', (eventArg) => {
     console.log('logger se aaya mai', eventArg);
 });
 
-emitter.emit('logger', {massage: 'mai aa gaya'});
+logger.log('massage');
+// 
+
