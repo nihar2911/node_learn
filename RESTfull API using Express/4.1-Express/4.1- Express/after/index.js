@@ -1,4 +1,4 @@
-const startup = require('debug')('startup');
+const debug = require('debug')('app:startup');
 const config = require('config');
 const morgan = require('morgan');
 const helmet = require('helmet');
@@ -22,13 +22,13 @@ app.use('/api/courses', courses);
 app.use('/', home);
 
 // Configuration
-startup('Application Name: ' + config.get('name'));
+console.log('Application Name: ' + config.get('name'));
 console.log('Mail Server: ' + config.get('mail.host'));
-// console.log('Mail Password: ' + config.get('mail.password'));
+console.log('Mail Password: ' + config.get('mail.password'));
 
 if (app.get('env') === 'development') {
   app.use(morgan('tiny'));
-  startup('Morgan enabled...');
+  debug('Morgan enabled...');
 }
 
 const port = process.env.PORT || 3000;

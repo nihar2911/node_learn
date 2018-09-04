@@ -18,7 +18,7 @@ function getUser(id) {
             console.log('Test Promise');
             resolve({
                 id: id,
-                gitHubUsername: 'nihar2911 22'
+                gitHubUsername: 'nihar2911'
             });
         }, 2000);
     })
